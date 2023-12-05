@@ -21,7 +21,7 @@ const Work = ({dot, border}) => {
   const [Projects, setProjects] = useState({})
   useEffect(() => {
     const fetchProject = async () => {
-      const res = await axios.get('http://localhost:3000/api/project');
+      const res = await axios.get('https://portfolio-v2-mi4h.vercel.app/api/project');
       setProjects(res.data.res)
       
     }

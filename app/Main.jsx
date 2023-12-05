@@ -45,11 +45,11 @@ export default function Main() {
       );
     });
     const VisiterUpdate = async () => {
-      const visit = await axios.get('http://localhost:3000/api/visit/656efcc9d46aba0844ec0369')
+      const visit = await axios.get('https://portfolio-v2-mi4h.vercel.app/api/visit/656efcc9d46aba0844ec0369')
       const curr = visit.data.visit.visit
       const newCurr = curr + 1
       setVisiter(newCurr)
-      await axios.put('http://localhost:3000/api/visit/656efcc9d46aba0844ec0369', {visit: newCurr})
+      await axios.put('https://portfolio-v2-mi4h.vercel.app/api/visit/656efcc9d46aba0844ec0369', {visit: newCurr})
     }
     VisiterUpdate()
 
